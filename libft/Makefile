@@ -14,7 +14,7 @@ CC = cc
 
 NAME = libft.a
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = 
 
 SRCS =  ft_isalpha.c\
 		ft_isdigit.c\

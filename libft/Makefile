@@ -6,7 +6,7 @@
 #    By: gsaiago <gsaiago@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/31 18:35:35 by gsaiago           #+#    #+#              #
-#    Updated: 2022/09/20 18:13:17 by gsaiago          ###   ########.fr        #
+#    Updated: 2022/09/26 10:28:45 by gsaiago          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC = cc
 
 NAME = libft.a
 
-CFLAGS = 
+CFLAGS = -Wall -Werror -Wextra 
 
 SRCS =  ft_isalpha.c\
 		ft_isdigit.c\

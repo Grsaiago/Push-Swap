@@ -12,7 +12,8 @@ LIBFT_LINK = -L$(LIBFT_PATH) -lft
 
 all: $(NAME)
 
-$(NAME): $(DO_LIBFT)
+$(NAME):
+	@$(DO_LIBFT)
 	@$(CC) $(CFLAGS) $(SRCS) $(LIBFT_LINK) -o $(NAME)
 	@echo "Push_Swap Done :D"
 

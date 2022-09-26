@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   utils_ps_moves.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsaiago <gsaiago@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/26 11:03:13 by gsaiago           #+#    #+#             */
-/*   Updated: 2022/09/26 16:49:53 by gsaiago          ###   ########.fr       */
+/*   Created: 2022/09/26 11:03:00 by gsaiago           #+#    #+#             */
+/*   Updated: 2022/09/26 16:17:01 by gsaiago          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int argc, char **argv)
-{
-	t_stacks	*stacks;
-	
-	if (argc < 2)
-	{
-		write(1, "Error!\n", 7);
-		exit(1);
-	}
-	//check_params(argc, argv);
-	stacks = &(t_stacks){0};
-	create_stack_a(argc, argv, &stacks->stack_a);
-	move_pa(stacks);
-	//move_sb(stacks);
-	//sorting_algo(t_stacks *stacks);
-	print_nodes(stacks->stack_a);
-	ps_lstclear(&stacks->stack_a);
-}
+
+//move_ss
+//move_pa
+//move_pb
+//move_ra
+//move_rb
+//move_rr
+//move_rra
+//move_rrb
+//move_rrr

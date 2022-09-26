@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ps_pa.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsaiago <gsaiago@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/26 11:03:13 by gsaiago           #+#    #+#             */
-/*   Updated: 2022/09/26 16:49:53 by gsaiago          ###   ########.fr       */
+/*   Created: 2022/09/26 16:35:22 by gsaiago           #+#    #+#             */
+/*   Updated: 2022/09/26 16:49:39 by gsaiago          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int argc, char **argv)
+void	move_pa(t_stacks *stacks)
 {
-	t_stacks	*stacks;
-	
-	if (argc < 2)
-	{
-		write(1, "Error!\n", 7);
-		exit(1);
-	}
-	//check_params(argc, argv);
-	stacks = &(t_stacks){0};
-	create_stack_a(argc, argv, &stacks->stack_a);
-	move_pa(stacks);
-	//move_sb(stacks);
-	//sorting_algo(t_stacks *stacks);
-	print_nodes(stacks->stack_a);
-	ps_lstclear(&stacks->stack_a);
+	t_psnode	*pop;
+	t_psnode	*aux;
+
+	pop = stacks->stack_b;
+	aux = stacks->stack_b;
+	if (!pop)
+		return ;
+	while (pop->next)
+		pop = pop->next;
+	while (aux->next->next)
+		aux = aux->next;
+	aux->next = NULL;
+	ps_lstadd_back(stack->&stack_a, pop);
+	write(1, "pa\n", 3);
 }

@@ -1,6 +1,11 @@
 NAME = push_swap
 
-SRCS = $(wildcard *.c)
+SRCS = push_swap.c\
+       utils_ps.c\
+       ps_sa.c\
+       ps_sb.c\
+       ps_ss.c\
+       ps_pa.c\
 
 CC = cc
 

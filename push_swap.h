@@ -35,7 +35,7 @@ void		ps_lstclear(t_psnode **lst);
 void		print_nodes(t_psnode *lst);
 void		create_stack_a(int ac, char **av, t_psnode **stack);
 void		index_stack(t_psnode **lst, int ac);
-int			ps_lstsize(t_psnode *lst);
+int		ps_lstsize(t_psnode *lst);
 t_psnode	*ps_lstlast(t_psnode *lst);
 // MOVES //
 void	move_big_sa(t_stacks *stacks);

@@ -24,9 +24,12 @@ int main(int argc, char **argv)
 	//check_params(argc, argv);
 	stacks = &(t_stacks){0};
 	create_stack_a(argc, argv, &stacks->stack_a);
-	move_pa(stacks);
-	//move_sb(stacks);
+	create_stack_a(argc, argv, &stacks->stack_b);
+	move_rrr(stacks);
 	//sorting_algo(t_stacks *stacks);
-	print_nodes(stacks->stack_a);
+	ft_printf("Stack a:\n"); // debug
+	print_nodes(stacks->stack_a); // debug
+	ft_printf("Stack b:\n"); // debug
+	print_nodes(stacks->stack_b); // debug
 	ps_lstclear(&stacks->stack_a);
 }

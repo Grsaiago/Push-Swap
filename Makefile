@@ -6,6 +6,13 @@ SRCS = push_swap.c\
        ps_sb.c\
        ps_ss.c\
        ps_pa.c\
+       ps_pb.c\
+       ps_ra.c\
+       ps_rb.c\
+       ps_rr.c\
+       ps_rra.c\
+       ps_rrb.c\
+       ps_rrr.c\
 
 CC = cc
 

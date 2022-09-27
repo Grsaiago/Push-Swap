@@ -45,4 +45,12 @@ void	move_big_sb(t_stacks *stacks);
 void	move_small_sb(t_stacks *stacks);
 void	move_sb(t_stacks *stacks);
 void	move_ss(t_stacks *stacks);
+void	move_pa(t_stacks *stacks);
+void	move_pb(t_stacks *stacks);
+void	move_ra(t_stacks *stacks);
+void	move_rb(t_stacks *stacks);
+void	move_rr(t_stacks *stacks);
+void	move_rra(t_stacks *stacks);
+void	move_rrb(t_stacks *stacks);
+void	move_rrr(t_stacks *stacks);
 #endif

@@ -26,6 +26,6 @@ void	move_pa(t_stacks *stacks)
 	while (aux->next->next)
 		aux = aux->next;
 	aux->next = NULL;
-	ps_lstadd_back(stacks->stack_a, pop);
+	ps_lstadd_back(&stacks->stack_a, pop);
 	write(1, "pa\n", 3);
 }

@@ -131,6 +131,7 @@ void	index_stack(t_psnode **stack, int ac)
 	}
 	return ;
 }
+
 void	print_nodes(t_psnode *lst)
 {
 	t_psnode	*node;

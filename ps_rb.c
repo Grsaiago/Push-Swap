@@ -7,6 +7,8 @@ void	move_rb(t_stacks *stacks)
 	t_psnode	*first;
 	t_psnode	*before_last;
 
+	if (!stacks->stack_b)
+		return ;
 	before_last = stacks->stack_b;
 	first = stacks->stack_b;
 	last = stacks->stack_b;

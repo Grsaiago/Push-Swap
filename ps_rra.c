@@ -6,6 +6,8 @@ void	move_rra(t_stacks *stacks)
 	t_psnode	*first;
 	t_psnode	*second;
 
+	if (!stacks->stack_a)
+		return ;
 	second = stacks->stack_a->next;
 	first = stacks->stack_a;
 	last = stacks->stack_a;

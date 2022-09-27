@@ -25,6 +25,7 @@ int main(int argc, char **argv)
 	stacks = &(t_stacks){0};
 	create_stack_a(argc, argv, &stacks->stack_a);
 	create_stack_a(argc, argv, &stacks->stack_b);
+	move_rr(stacks);
 	move_rrr(stacks);
 	//sorting_algo(t_stacks *stacks);
 	ft_printf("Stack a:\n"); // debug

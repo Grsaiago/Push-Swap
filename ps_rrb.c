@@ -6,6 +6,8 @@ void	move_rrb(t_stacks *stacks)
 	t_psnode	*first;
 	t_psnode	*second;
 
+	if (!stacks->stack_b)
+		return ;
 	second = stacks->stack_b->next;
 	first = stacks->stack_b;
 	last = stacks->stack_b;

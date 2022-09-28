@@ -46,7 +46,7 @@ void	ra_n_times(t_stacks *stacks, unsigned int n)
 
 void	rra_n_times(t_stacks *stacks, unsigned int n)
 {
-	while (n > 0)
+	while (n >= 0)
 	{
 		move_rra(stacks);
 		n--;
@@ -65,8 +65,8 @@ void	ps_sorting(t_stacks *stacks)
 	{
 		len_sa = ps_lstsize(stacks->stack_a);
 		next_i_distance = find_next_i(stacks, next_i);
-		if (next_i_distance != 0 && len_sa != 1)
-			ra_n_times(stacks, next_i_distance);
+		if (len_sa != 1)
+			rra_n_times(stacks, next_i_distance);
 		move_pb(stacks);
 		next_i++;
 	}

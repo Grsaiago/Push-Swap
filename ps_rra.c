@@ -17,5 +17,5 @@ void	move_rra(t_stacks *stacks)
 	before_last->next = NULL;
 	last->next = first;
 	stacks->stack_a = last;
-	write(1, "rra\n", 3);
+	write(1, "rra\n", 4);
 }

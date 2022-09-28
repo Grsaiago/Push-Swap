@@ -24,7 +24,7 @@ void	move_pa(t_stacks *stacks)
 	if (!pop->next)
 	{
 		ps_lstadd_back(&stacks->stack_a, pop);
-		stacks->stack_a = NULL;
+		stacks->stack_b = NULL;
 	}
 	else
 	{

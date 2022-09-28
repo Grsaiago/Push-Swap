@@ -30,12 +30,13 @@ int main(int argc, char **argv)
 	//sorting_algo(t_stacks *stacks);
 	ft_printf("Stack a input:\n"); // debug
 	print_nodes(stacks->stack_a); // debug
-	move_rra(stacks); // debug
 //	if (is_ordered(stacks))
 //		return (ft_printf("Already in order\n"));
 //	ps_sorting(stacks);
-//	ft_printf("Stack b:\n"); // debug
-//	print_nodes(stacks->stack_b); // debug
+	move_pb(stacks);
+	move_pb(stacks);
+	ft_printf("Stack b:\n"); // debug
+	print_nodes(stacks->stack_b); // debub
 	ft_printf("Stack a sorted:\n"); // debug
 	print_nodes(stacks->stack_a); // debug
 	ps_lstclear(&stacks->stack_a);

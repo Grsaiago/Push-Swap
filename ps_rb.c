@@ -15,5 +15,5 @@ void	move_rb(t_stacks *stacks)
 	last->next = stacks->stack_b;
 	first->next = NULL;
 	stacks->stack_b = second;
-	write(1, "rb\n", 4);
+	write(1, "rb\n", 3);
 }

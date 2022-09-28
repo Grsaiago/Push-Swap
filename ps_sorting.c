@@ -1,5 +1,78 @@
-
 #include "push_swap.h"
+
+unsigned int	find_next_i(t_stacks *stacks, unsigned int next_i)
+{
+	t_psnode	*stack_a;
+	unsigned int	next_i_distance;
+
+	next_i_distance = 0;
+	stack_a = stacks->stack_a;
+	while (stack_a)
+	{
+		if (stack_a->index == next_i)
+			return (next_i_distance);
+		next_i_distance++;
+		stack_a = stack_a->next;
+	}
+	return (next_i_distance);
+}
+
+int	is_ordered(t_stacks *stacks)
+{
+	t_psnode	*stack_a;
+	int		aux;
+
+	stack_a = stacks->stack_a;
+	aux = 0;
+	while (stack_a)
+	{
+		if (stack_a->index != aux)
+			return (0);
+		aux++;
+		stack_a = stack_a->next;
+	}
+	return (1);
+}
+
+void	ra_n_times(t_stacks *stacks, unsigned int n)
+{
+	while (n > 0)
+	{
+		move_ra(stacks);
+		n--;
+	}
+	return ;
+}
+
+void	rra_n_times(t_stacks *stacks, unsigned int n)
+{
+	while (n > 0)
+	{
+		move_rra(stacks);
+		n--;
+	}
+	return ;
+}
+
+void	ps_sorting(t_stacks *stacks)
+{
+	unsigned int	len_sa;
+	unsigned int	next_i;
+	unsigned int	next_i_distance;
+
+	next_i = 0;
+	while (next_i < stacks->len_stack_a)
+	{
+		len_sa = ps_lstsize(stacks->stack_a);
+		next_i_distance = find_next_i(stacks, next_i);
+		if (next_i_distance != 0 && len_sa != 1)
+			ra_n_times(stacks, next_i_distance);
+		move_pb(stacks);
+		next_i++;
+	}
+	while(stacks->stack_b)
+		move_pa(stacks);
+}
 
 //find next index position as in how many nodes after the first it is on stack_a
 //

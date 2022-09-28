@@ -9,11 +9,19 @@ void	move_pb(t_stacks *stacks)
 	aux = stacks->stack_a;
 	if (!pop)
 		return ;
-	while (pop->next)
-		pop = pop->next;
-	while (aux->next->next)
-		aux = aux->next;
-	aux->next = NULL;
-	ps_lstadd_back(&stacks->stack_b, pop);
+	if (!pop->next)
+	{
+		ps_lstadd_back(&stacks->stack_b, pop);
+		stacks->stack_b = NULL;
+	}
+	else
+	{
+		while (pop->next)
+			pop = pop->next;
+		while (aux->next->next)
+			aux = aux->next;
+		aux->next = NULL;
+		ps_lstadd_back(&stacks->stack_b, pop);
+	}
 	write(1, "pb\n", 3);
 }

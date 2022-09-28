@@ -1,22 +1,19 @@
-
 #include "push_swap.h"
 
 void	move_rb(t_stacks *stacks)
 {
 	t_psnode	*last;
 	t_psnode	*first;
-	t_psnode	*before_last;
+	t_psnode	*second;
 
 	if (!stacks->stack_b)
 		return ;
-	before_last = stacks->stack_b;
+	second = stacks->stack_b->next;
 	first = stacks->stack_b;
 	last = stacks->stack_b;
 	last = ps_lstlast(last);
-	while (before_last->next->next)
-		before_last = before_last->next;
-	before_last->next = NULL;
-	last->next = first;
-	stacks->stack_b = last;
-	write(1, "rb\n", 3);
+	last->next = stacks->stack_b;
+	first->next = NULL;
+	stacks->stack_b = second;
+	write(1, "rb\n", 4);
 }

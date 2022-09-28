@@ -4,18 +4,16 @@ void	move_ra(t_stacks *stacks)
 {
 	t_psnode	*last;
 	t_psnode	*first;
-	t_psnode	*before_last;
+	t_psnode	*second;
 
 	if (!stacks->stack_a)
 		return ;
-	before_last = stacks->stack_a;
+	second = stacks->stack_a->next;
 	first = stacks->stack_a;
 	last = stacks->stack_a;
 	last = ps_lstlast(last);
-	while (before_last->next->next)
-		before_last = before_last->next;
-	before_last->next = NULL;
-	last->next = first;
-	stacks->stack_a = last;
-	write(1, "ra\n", 3);
+	last->next = stacks->stack_a;
+	first->next = NULL;
+	stacks->stack_a = second;
+	write(1, "ra\n", 4);
 }

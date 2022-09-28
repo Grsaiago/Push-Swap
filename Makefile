@@ -41,7 +41,7 @@ clean:
 re: clean all
 
 lldb: re
-	lldb $(NAME) 1 2 3 4
+	lldb $(NAME) 3 1 2
 
 .PHONY:
 	all clean re lldb

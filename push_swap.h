@@ -26,6 +26,7 @@ typedef struct s_stacks
 {
 	t_psnode	*stack_a;
 	t_psnode	*stack_b;
+	int		len_stack_a;
 }	t_stacks;
 
 // FUNCTIONS //

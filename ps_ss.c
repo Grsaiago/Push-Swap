@@ -14,18 +14,8 @@
 
 void	move_ss(t_stacks *stacks)
 {
-	t_psnode	*node_a;
-	t_psnode	*node_b;
-
-	node_a = stacks->stack_a;
-	node_b = stacks->stack_b;
-	if (ps_lstsize(node_a) <= 2)
-		move_small_sa(stacks);
-	else
-		move_big_sa(stacks);
-	if (ps_lstsize(node_b) <= 2)
-		move_small_sb(stacks);
-	else
-		move_big_sb(stacks);
-	write (1, "ss\n", 3);
+	core_sa(stacks);
+	core_sb(stacks);
+	write(1, "ss\n", 3);
+	return ;
 }

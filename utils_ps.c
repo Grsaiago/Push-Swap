@@ -25,23 +25,12 @@ t_psnode	*ps_lstnew(int value)
 	return (new);
 }
 
-
-void	ps_lstadd_back(t_psnode **lst, t_psnode *new)
+void	ps_lstadd_front(t_psnode **lst, t_psnode *new)
 {
-	t_psnode	*last_node;
-
-	if (!new)
+	if (!lst || !new)
 		return ;
-	if (!*lst)
-		*lst = new;
-	else
-	{
-		last_node = *lst;
-		while (last_node->next)
-			last_node = last_node->next;
-		last_node->next = new;
-	}
-	return ;
+	new->next = *lst;
+	*lst = new;
 }
 
 void	ps_lstclear(t_psnode **lst)
@@ -100,7 +89,7 @@ void	create_stack_a(int ac, char **av, t_psnode **stack)
 	while (++i < ac)
 	{
 		node = ps_lstnew(ft_atoi(av[i]));
-		ps_lstadd_back(stack, node);
+		ps_lstadd_front(stack, node);
 	}
 	index_stack(stack, ac);
 }

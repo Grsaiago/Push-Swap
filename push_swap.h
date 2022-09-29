@@ -31,7 +31,7 @@ typedef struct s_stacks
 
 // FUNCTIONS //
 t_psnode	*ps_lstnew(int value);
-void		ps_lstadd_back(t_psnode **lst, t_psnode *new);
+void		ps_lstadd_front(t_psnode **lst, t_psnode *new);
 void		ps_lstclear(t_psnode **lst);
 int		ps_lstsize(t_psnode *lst);
 t_psnode	*ps_lstlast(t_psnode *lst);
@@ -39,11 +39,9 @@ void		print_nodes(t_psnode *lst);
 void		create_stack_a(int ac, char **av, t_psnode **stack);
 void		index_stack(t_psnode **lst, int ac);
 // MOVES //
-void	move_big_sa(t_stacks *stacks);
-void	move_small_sa(t_stacks *stacks);
+void	core_sa(t_stacks *stacks);
 void	move_sa(t_stacks *stacks);
-void	move_big_sb(t_stacks *stacks);
-void	move_small_sb(t_stacks *stacks);
+void	core_sb(t_stacks *stacks);
 void	move_sb(t_stacks *stacks);
 void	move_ss(t_stacks *stacks);
 void	move_pa(t_stacks *stacks);
@@ -55,8 +53,8 @@ void	move_rra(t_stacks *stacks);
 void	move_rrb(t_stacks *stacks);
 void	move_rrr(t_stacks *stacks);
 void	ps_sorting(t_stacks *stacks);
-void	rra_n_times(t_stacks *stacks, unsigned int n);
-void	ra_n_times(t_stacks *stacks, unsigned int n);
+void	rra_n_times(t_stacks *stacks, int n);
+void	ra_n_times(t_stacks *stacks, int n);
 int	is_ordered(t_stacks *stacks);
 unsigned int	find_next_i(t_stacks *stacks, unsigned int next_i);
 

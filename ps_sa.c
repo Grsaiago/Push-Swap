@@ -12,48 +12,34 @@
 
 #include "push_swap.h"
 
+void	core_sa(t_stacks *stacks)
+{
+	t_psnode	*second;
+	t_psnode	*third;
+	int		sa_len;
+	
+	sa_len = ps_lstsize(stacks->stack_a);
+	if (!stacks->stack_a->next)
+		return ;
+	second = stacks->stack_a->next;
+	if (sa_len == 2)
+	{
+		second->next = stacks->stack_a;
+		stacks->stack_a->next = NULL;
+		stacks->stack_a = second;
+	}
+	else	
+	{
+		third = stacks->stack_a->next->next;
+		stacks->stack_a->next = third;
+		second->next = stacks->stack_a;
+		stacks->stack_a = second;
+	}
+	return ;
+}
 void	move_sa(t_stacks *stacks)
 {
-	t_psnode	*last;
-
-	last = stacks->stack_a;
-	if (ps_lstsize(last) <= 2)
-		move_small_sa(stacks);
-	else
-		move_big_sa(stacks);
+	core_sa(stacks);
 	write(1, "sa\n", 3);
-	return ;
-}
-
-void	move_big_sa(t_stacks *stacks)
-{
-	t_psnode	*middle;
-	t_psnode	*last;
-	t_psnode	*third;
-
-	last = stacks->stack_a;
-	middle = stacks->stack_a;
-	third = stacks->stack_a;
-	last = ps_lstlast(last);
-	while (middle->next->next)
-		middle = middle->next;
-	while (third->next->next->next)
-		third = third->next;
-	middle->next = NULL;
-	third->next = last;
-	last->next = middle;
-	return ;
-}
-
-void	move_small_sa(t_stacks *stacks)
-{
-	t_psnode	*first;
-	t_psnode	*second;
-
-	first = stacks->stack_a;
-	second = first->next;
-	first->next = NULL;
-	second->next = first;
-	stacks->stack_a = second;
 	return ;
 }

@@ -25,20 +25,16 @@ int main(int argc, char **argv)
 	stacks = &(t_stacks){0};
 	create_stack_a(argc, argv, &stacks->stack_a);
 	stacks->len_stack_a= ps_lstsize(stacks->stack_a);
-	ft_printf("stack_a size > |%d|\n", stacks->len_stack_a); // debug
-	//create_stack_a(argc, argv, &stacks->stack_b); //debug
-	//sorting_algo(t_stacks *stacks);
-	ft_printf("Stack a input:\n"); // debug
-	print_nodes(stacks->stack_a); // debug
-//	if (is_ordered(stacks))
-//		return (ft_printf("Already in order\n"));
-//	ps_sorting(stacks);
-	move_pb(stacks);
-	move_pb(stacks);
-	ft_printf("Stack b:\n"); // debug
-	print_nodes(stacks->stack_b); // debub
-	ft_printf("Stack a sorted:\n"); // debug
-	print_nodes(stacks->stack_a); // debug
+//	ft_printf("stack_a size > |%d|\n", stacks->len_stack_a); // debug
+//	ft_printf("Stack a input:\n"); // debug
+//	print_nodes(stacks->stack_a); // debug
+	if (is_ordered(stacks))
+		return (ft_printf("Already in order\n"));
+	ps_sorting(stacks);
+//	ft_printf("Stack b:\n"); // debug
+//	print_nodes(stacks->stack_b); // debub
+//	ft_printf("Stack a sorted:\n"); // debug
+//	print_nodes(stacks->stack_a); // debug
 	ps_lstclear(&stacks->stack_a);
-	ps_lstclear(&stacks->stack_b); //debug
+//	ps_lstclear(&stacks->stack_b); //debug
 }

@@ -34,7 +34,7 @@ int	is_ordered(t_stacks *stacks)
 	return (1);
 }
 
-void	ra_n_times(t_stacks *stacks, unsigned int n)
+void	ra_n_times(t_stacks *stacks, int n)
 {
 	while (n > 0)
 	{
@@ -44,9 +44,9 @@ void	ra_n_times(t_stacks *stacks, unsigned int n)
 	return ;
 }
 
-void	rra_n_times(t_stacks *stacks, unsigned int n)
+void	rra_n_times(t_stacks *stacks, int n)
 {
-	while (n >= 0)
+	while (n > 0)
 	{
 		move_rra(stacks);
 		n--;
@@ -56,17 +56,20 @@ void	rra_n_times(t_stacks *stacks, unsigned int n)
 
 void	ps_sorting(t_stacks *stacks)
 {
-	unsigned int	len_sa;
-	unsigned int	next_i;
-	unsigned int	next_i_distance;
+	int	len_sa;
+	int	next_i;
+	int	next_i_distance;
+
 
 	next_i = 0;
 	while (next_i < stacks->len_stack_a)
 	{
 		len_sa = ps_lstsize(stacks->stack_a);
 		next_i_distance = find_next_i(stacks, next_i);
-		if (len_sa != 1)
-			rra_n_times(stacks, next_i_distance);
+		if (len_sa != 1 && (next_i_distance < len_sa / 2))
+			ra_n_times(stacks, next_i_distance);
+		else if (len_sa != 1 && (next_i_distance >= len_sa / 2))
+			rra_n_times(stacks, len_sa - next_i_distance);
 		move_pb(stacks);
 		next_i++;
 	}

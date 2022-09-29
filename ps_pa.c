@@ -23,17 +23,14 @@ void	move_pa(t_stacks *stacks)
 		return ;
 	if (!pop->next)
 	{
-		ps_lstadd_back(&stacks->stack_a, pop);
+		ps_lstadd_front(&stacks->stack_a, pop);
 		stacks->stack_b = NULL;
 	}
 	else
 	{
-		while (pop->next)
-			pop = pop->next;
-		while (aux->next->next)
-			aux = aux->next;
-		aux->next = NULL;
-		ps_lstadd_back(&stacks->stack_a, pop);
+		aux = stacks->stack_b->next;
+		ps_lstadd_front(&stacks->stack_a, pop);
+		stacks->stack_b = aux;
 	}
 	write(1, "pa\n", 3);
 }

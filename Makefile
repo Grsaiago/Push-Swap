@@ -36,7 +36,7 @@ $(DO_LIBFT):
 clean:
 	@make clean -C $(LIBFT_PATH)
 	@rm -rf $(NAME).dSYM
-	@rm $(NAME)
+	@rm -f $(NAME)
 
 re: clean all
 

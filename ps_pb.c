@@ -11,17 +11,14 @@ void	move_pb(t_stacks *stacks)
 		return ;
 	if (!pop->next)
 	{
-		ps_lstadd_back(&stacks->stack_b, pop);
-		stacks->stack_b = NULL;
+		ps_lstadd_front(&stacks->stack_b, pop);
+		stacks->stack_a = NULL;
 	}
 	else
 	{
-		while (pop->next)
-			pop = pop->next;
-		while (aux->next->next)
-			aux = aux->next;
-		aux->next = NULL;
-		ps_lstadd_back(&stacks->stack_b, pop);
+		aux = stacks->stack_a->next;
+		ps_lstadd_front(&stacks->stack_b, pop);
+		stacks->stack_a = aux;
 	}
 	write(1, "pb\n", 3);
 }

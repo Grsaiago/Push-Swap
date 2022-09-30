@@ -39,6 +39,8 @@ t_psnode	*ps_lstlast(t_psnode *lst);
 void		print_nodes(t_psnode *lst);
 void		create_stack_a(int ac, char **av, t_psnode **stack);
 void		index_stack(t_psnode **lst, int ac);
+void		ps_radix(t_stacks *stacks);
+int		find_highest_bit(int high_numb);
 // MOVES //
 void	core_sa(t_stacks *stacks);
 void	move_sa(t_stacks *stacks);

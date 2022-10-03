@@ -6,7 +6,7 @@
 /*   By: gsaiago <gsaiago@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:03:06 by gsaiago           #+#    #+#             */
-/*   Updated: 2022/09/26 14:28:28 by gsaiago          ###   ########.fr       */
+/*   Updated: 2022/10/03 17:37:27 by gsaiago          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,8 +96,8 @@ void	create_stack_a(int ac, char **av, t_psnode **stack)
 
 void	index_stack(t_psnode **stack, int ac)
 {
-	int		i;
-	int		aux;
+	int			i;
+	int			aux;
 	t_psnode	*small_node;
 	t_psnode	*node;
 
@@ -131,5 +131,4 @@ void	print_nodes(t_psnode *lst)
 		ft_printf("value > |%d|\nindex > |%d|\n-----------\n", node->value, node->index);
 	node = node->next;
 	}
-
 }

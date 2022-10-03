@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gsaiago <gsaiago@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/03 14:38:29 by gsaiago           #+#    #+#             */
+/*   Updated: 2022/10/03 14:53:01 by gsaiago          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-long int ft_tatol(const char *str, int sign);
+static long int	ft_tatol(const char *str, long int sign);
 
 long int	ft_atol(const char *str)
 {
@@ -22,11 +33,11 @@ long int	ft_atol(const char *str)
 	return (0);
 }
 
-long int	ft_tatol(const char *str, int sign)
+long int	ft_tatol(const char *str, long int sign)
 {
-	int		len;
-	int		i;
-	int		max;
+	int			len;
+	int			i;
+	int			max;
 	long int	numb;
 
 	i = -1;

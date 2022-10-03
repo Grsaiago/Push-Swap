@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ps_radix.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gsaiago <gsaiago@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/03 14:27:05 by gsaiago           #+#    #+#             */
+/*   Updated: 2022/10/03 17:41:26 by gsaiago          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
@@ -6,7 +17,7 @@ int	find_highest_bit(int high_numb)
 	int	high_bit;
 
 	high_bit = 31;
-	while(high_bit >= 0)
+	while (high_bit >= 0)
 	{
 		if (high_numb & (1 << high_bit))
 			break ;
@@ -15,12 +26,11 @@ int	find_highest_bit(int high_numb)
 	return (high_bit);
 }
 
-
 void	ps_radix(t_stacks *stacks)
 {
-	int		i;
-	int		high_bit;
-	int		bit;
+	int			i;
+	int			high_bit;
+	int			bit;
 	t_psnode	*head_a;
 
 	bit = 0;

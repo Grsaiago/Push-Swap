@@ -6,7 +6,7 @@
 /*   By: gsaiago <gsaiago@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 18:23:47 by gsaiago           #+#    #+#             */
-/*   Updated: 2022/09/20 18:13:01 by gsaiago          ###   ########.fr       */
+/*   Updated: 2022/10/03 14:39:26 by gsaiago          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
 // Expanded Libft //
 long int		ft_atol(const char *str);
-long int		ft_pow(long int base, long int  exp);
+long int		ft_pow(long int base, long int exp);
 // Ft_printf Functions //
 int				ft_printf(const char *s, ...);
 int				ft_putstr(char *s);

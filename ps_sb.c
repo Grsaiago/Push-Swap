@@ -6,7 +6,7 @@
 /*   By: gsaiago <gsaiago@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 16:14:27 by gsaiago           #+#    #+#             */
-/*   Updated: 2022/09/26 16:24:52 by gsaiago          ###   ########.fr       */
+/*   Updated: 2022/10/03 17:39:01 by gsaiago          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	core_sb(t_stacks *stacks)
 {
 	t_psnode	*second;
 	t_psnode	*third;
-	int		sa_len;
-	
+	int			sa_len;
+
 	sa_len = ps_lstsize(stacks->stack_b);
 	if (!stacks->stack_b->next)
 		return ;
@@ -35,7 +35,7 @@ void	core_sb(t_stacks *stacks)
 		stacks->stack_b->next = NULL;
 		stacks->stack_b = second;
 	}
-	else	
+	else
 	{
 		third = stacks->stack_b->next->next;
 		stacks->stack_b->next = third;

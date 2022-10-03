@@ -6,24 +6,24 @@
 /*   By: gsaiago <gsaiago@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:03:13 by gsaiago           #+#    #+#             */
-/*   Updated: 2022/09/26 16:49:53 by gsaiago          ###   ########.fr       */
+/*   Updated: 2022/10/03 17:37:49 by gsaiago          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	t_stacks	*stacks;
-	
+
 	stacks = &(t_stacks){0};
-	if (argc < 2 || not_valid_args(argc, argv))
-		exit_func(stacks);
-	//check_params(argc, argv);
+	not_valid_args(argc, argv);
 	create_stack_a(argc, argv, &stacks->stack_a);
+	//validation for argc == 1
+	//algo for argc > 1 && < 5
 	if (!stacks->stack_a)
 		exit_func(stacks);
-	stacks->len_stack_a= ps_lstsize(stacks->stack_a);
+	stacks->len_stack_a = ps_lstsize(stacks->stack_a);
 //	ft_printf("stack_a size > |%d|\n", stacks->len_stack_a); // debug
 //	ft_printf("Stack a input:\n"); // debug
 //	print_nodes(stacks->stack_a); // debug

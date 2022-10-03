@@ -17,11 +17,9 @@ static int	ft_params(const char *s, int aux, va_list vlist);
 int	ft_printf(const char *s, ...)
 {
 	va_list		vlist;
-	long int	i;
 	long int	aux;
 
 	aux = ft_strlen(s);
-	i = 0;
 	va_start(vlist, s);
 	while (*s)
 	{

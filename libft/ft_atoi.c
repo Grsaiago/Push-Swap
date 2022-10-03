@@ -12,16 +12,13 @@
 
 #include "libft.h"
 
-static int	ft_pow(int n);
 static int	ft_tatoi(const char *str, int sign);
 
 int	ft_atoi(const char *str)
 {
-	int	numb;
 	int	sign;
 
 	sign = 1;
-	numb = 0;
 	while ((*str >= 9 && *str <= 13) || *str == 32)
 		str++;
 	if (*str == '+' && str[1] >= '0' && str[1] <= '9')
@@ -51,18 +48,6 @@ static int	ft_tatoi(const char *str, int sign)
 		len++;
 	max = len;
 	while (++i < max)
-		numb = numb + (str[i] - 48) * ft_pow(--len);
+		numb = numb + (str[i] - 48) * ft_pow(10, --len);
 	return (numb * sign);
-}
-
-static int	ft_pow(int n)
-{
-	int	base;
-	int	i;
-
-	i = -1;
-	base = 1;
-	while (++i < n)
-		base = base * 10;
-	return (base);
 }

@@ -16,14 +16,13 @@ int main(int argc, char **argv)
 {
 	t_stacks	*stacks;
 	
-	if (argc < 2 || not_valid_args(argc, argv))
-	{
-		write(1, "Error!\n", 7);
-		exit(1);
-	}
-	//check_params(argc, argv);
 	stacks = &(t_stacks){0};
+	if (argc < 2 || not_valid_args(argc, argv))
+		exit_func(stacks);
+	//check_params(argc, argv);
 	create_stack_a(argc, argv, &stacks->stack_a);
+	if (!stacks->stack_a)
+		exit_func(stacks);
 	stacks->len_stack_a= ps_lstsize(stacks->stack_a);
 //	ft_printf("stack_a size > |%d|\n", stacks->len_stack_a); // debug
 //	ft_printf("Stack a input:\n"); // debug

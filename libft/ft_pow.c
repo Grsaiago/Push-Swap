@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	ft_pow(size_t base, size_t exp)
+long int	ft_pow(long int base, long int exp)
 {
 	if (!exp)
 		return (1);

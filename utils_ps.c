@@ -51,24 +51,6 @@ void	ps_lstadd_front(t_psnode **lst, t_psnode *new)
 	*lst = new;
 }
 
-void	ps_lstclear(t_psnode **lst)
-{
-	void		*aux;
-	t_psnode	*node;
-
-	if (!lst)
-		return ;
-	node = *lst;
-	while (node)
-	{
-		aux = node->next;
-		free(node);
-		node = aux;
-	}
-	*lst = NULL;
-	return ;
-}
-
 t_psnode	*ps_lstlast(t_psnode *lst)
 {
 	t_psnode	*node;

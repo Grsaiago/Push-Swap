@@ -39,6 +39,8 @@ void	ps_radix(t_stacks *stacks)
 		}
 		while (stacks->stack_b)
 			move_pa(stacks);
+		if (is_ordered(stacks))
+			return ;
 		bit++;
 	}
 }

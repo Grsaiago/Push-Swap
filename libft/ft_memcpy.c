@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t len)
 
 	destc = (char *)dest;
 	srcc = (const char *)src;
-	if (destc <= 0 && srcc <= 0)
+	if (!destc && !srcc)
 		return (NULL);
 	while (len--)
 		*destc++ = *srcc++;

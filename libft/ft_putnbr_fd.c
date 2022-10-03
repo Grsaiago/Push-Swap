@@ -24,7 +24,7 @@ void	ft_putnbr_fd(int nbr, int fd)
 	}
 	else
 		n = nbr;
-	if (n < 10 && n >= 0)
+	if (n < 10)
 	{
 		nb = n + 48;
 		write (fd, &nb, 1);

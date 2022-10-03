@@ -16,6 +16,7 @@ SRCS = push_swap.c\
        ps_sorting.c\
        ps_radix.c\
        ps_validate.c\
+       ps_exit.c\
 
 CC = cc
 

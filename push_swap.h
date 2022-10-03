@@ -33,7 +33,6 @@ typedef struct s_stacks
 t_psnode	*ps_lstnew(int value);
 void		ps_lstadd_front(t_psnode **lst, t_psnode *new);
 void		ps_lstadd_back(t_psnode **lst, t_psnode *new);
-void		ps_lstclear(t_psnode **lst);
 int		ps_lstsize(t_psnode *lst);
 t_psnode	*ps_lstlast(t_psnode *lst);
 void		print_nodes(t_psnode *lst);
@@ -61,5 +60,9 @@ void	rra_n_times(t_stacks *stacks, int n);
 void	ra_n_times(t_stacks *stacks, int n);
 int	is_ordered(t_stacks *stacks);
 unsigned int	find_next_i(t_stacks *stacks, unsigned int next_i);
+
+// EXIT //
+void		exit_func(t_stacks *stacks);
+void		ps_lstclear(t_psnode **lst);
 
 #endif

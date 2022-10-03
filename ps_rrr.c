@@ -7,7 +7,7 @@ void	move_rrr(t_stacks *stacks)
 	t_psnode	*first;
 	t_psnode	*second;
 
-	if (!(stacks->stack_a || stacks->stack_b));
+	if (!(stacks->stack_a || stacks->stack_b))
 		return ;
 	second = stacks->stack_a->next;
 	first = stacks->stack_a;

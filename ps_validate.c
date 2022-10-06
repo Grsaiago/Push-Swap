@@ -25,15 +25,11 @@ int	if_not_numb(int ac, char **av)
 		{
 			if (y == 0)
 			{
-				if ((av[x][y] == '-' || av[x][y] == '+')
-					&& ft_strlen(av[x]) < 2)
-					exit_func(NULL);
+				if (av[x][y] == '-' || av[x][y] == '+')
+					y++;
 			}
-			else
-			{
-				if (!ft_isdigit(av[x][y]))
-					exit_func(NULL);
-			}
+			if (!ft_isdigit(av[x][y]))
+				exit_func(NULL);
 			y++;
 		}
 		x++;

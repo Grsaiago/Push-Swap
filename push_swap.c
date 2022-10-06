@@ -16,6 +16,8 @@ int	main(int argc, char **argv)
 {
 	t_stacks	*stacks;
 
+	if (argc < 2)
+		return (0);
 	stacks = &(t_stacks){0};
 	not_valid_args(argc, argv);
 	create_stack_a(argc, argv, &stacks->stack_a);
@@ -28,9 +30,14 @@ int	main(int argc, char **argv)
 //	ft_printf("Stack a input:\n"); // debug
 //	print_nodes(stacks->stack_a); // debug
 	if (is_ordered(stacks))
-		return (ft_printf("Already in order\n"));
+		;
+	else if (argc == 3)
+		move_sa(stacks);
 //	ft_printf("highest bit de 8 é > |%d|\n", find_highest_bit(8)); //debug
-	ps_radix(stacks);
+	else if (argc == 4)
+		ps_smallsort(stacks);
+	else
+		ps_radix(stacks);
 //	ft_printf("Stack b:\n"); // debug
 //	print_nodes(stacks->stack_b); // debub
 //	ft_printf("Stack a sorted:\n"); // debug

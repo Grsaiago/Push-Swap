@@ -17,6 +17,7 @@ SRCS = push_swap.c\
        ps_radix.c\
        ps_validate.c\
        ps_exit.c\
+       ps_smallsort.c\
 
 CC = cc
 
@@ -41,10 +42,13 @@ clean:
 	@rm -rf $(NAME).dSYM
 	@rm -f $(NAME)
 
+fclean: clean
+	@make fclean -C $(LIBTF_PATH)
+
 re: clean all
 
 lldb: re
 	lldb $(NAME) 3 1 2
 
 .PHONY:
-	all clean re lldb
+	all clean fclean re lldb

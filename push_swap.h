@@ -47,6 +47,7 @@ int				not_int_range(int ac, char **av);
 int				if_not_numb(int ac, char **av);
 int				no_duplicates(int ac, char **av);
 int				compare_to_av(int ac, int x, char *ref, char **av);
+void				ps_smallsort(t_stacks *stack);
 // MOVES //
 void			core_sa(t_stacks *stacks);
 void			move_sa(t_stacks *stacks);

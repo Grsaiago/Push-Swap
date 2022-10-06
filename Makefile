@@ -1,7 +1,6 @@
 NAME = push_swap
 
 SRCS = push_swap.c\
-       utils_ps.c\
        ps_sa.c\
        ps_sb.c\
        ps_ss.c\
@@ -13,11 +12,12 @@ SRCS = push_swap.c\
        ps_rra.c\
        ps_rrb.c\
        ps_rrr.c\
-       ps_sorting.c\
-       ps_radix.c\
+       ps_lst.c\
        ps_validate.c\
+       ps_stacks.c\
+       ps_sorting.c\
+       ps_sorting_utils.c\
        ps_exit.c\
-       ps_smallsort.c\
 
 CC = cc
 
@@ -29,12 +29,11 @@ LIBFT_LINK = -L$(LIBFT_PATH) -lft
 
 all: $(NAME)
 
-$(NAME):
-	@$(DO_LIBFT)
+$(NAME): $(DO_LIBFT)
 	@$(CC) $(CFLAGS) $(SRCS) $(LIBFT_LINK) -o $(NAME)
 	@echo "Push_Swap Done :D"
 
-$(DO_LIBFT):
+$(DO_LIBFT): 
 	@make -C $(LIBFT_PATH)
 
 clean:
@@ -43,7 +42,7 @@ clean:
 	@rm -f $(NAME)
 
 fclean: clean
-	@make fclean -C $(LIBTF_PATH)
+	@make fclean -C $(LIBFT_PATH)
 
 re: clean all
 

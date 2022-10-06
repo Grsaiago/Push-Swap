@@ -29,25 +29,29 @@ typedef struct s_stacks
 	int			len_stack_a;
 }	t_stacks;
 
-// AUX FUNCTIONS //
+// SORT FUNCTIONS //
+void			ps_three_sort(t_stacks *stack);
+void			ps_five_sort(t_stacks *stacks);
+void			ps_radix(t_stacks *stacks);
+// STACK FUNCTIONS //
 t_psnode		*ps_lstnew(int value);
+t_psnode		*ps_lstlast(t_psnode *lst);
 void			ps_lstadd_front(t_psnode **lst, t_psnode *new);
 void			ps_lstadd_back(t_psnode **lst, t_psnode *new);
 int				ps_lstsize(t_psnode *lst);
-t_psnode		*ps_lstlast(t_psnode *lst);
 void			print_nodes(t_psnode *lst);
 void			create_stack_a(int ac, char **av, t_psnode **stack);
 void			index_stack(t_psnode **lst, int ac);
-void			ps_radix(t_stacks *stacks);
+// AUX FUNCTIONS //
 int				find_highest_bit(int high_numb);
-int				not_valid_args(int ac, char **av);
+int				is_ordered(t_stacks *stacks);
+unsigned int	find_next_i(t_stacks *stacks, unsigned int next_i);
 // VALIDATION FUNCTIONS //
 int				not_valid_args(int ac, char **av);
 int				not_int_range(int ac, char **av);
 int				if_not_numb(int ac, char **av);
 int				no_duplicates(int ac, char **av);
 int				compare_to_av(int ac, int x, char *ref, char **av);
-void				ps_smallsort(t_stacks *stack);
 // MOVES //
 void			core_sa(t_stacks *stacks);
 void			move_sa(t_stacks *stacks);
@@ -62,11 +66,8 @@ void			move_rr(t_stacks *stacks);
 void			move_rra(t_stacks *stacks);
 void			move_rrb(t_stacks *stacks);
 void			move_rrr(t_stacks *stacks);
-void			ps_sorting(t_stacks *stacks);
 void			rra_n_times(t_stacks *stacks, int n);
 void			ra_n_times(t_stacks *stacks, int n);
-int				is_ordered(t_stacks *stacks);
-unsigned int	find_next_i(t_stacks *stacks, unsigned int next_i);
 // EXIT //
 void			exit_func(t_stacks *stacks);
 void			ps_lstclear(t_psnode **lst);

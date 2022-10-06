@@ -21,27 +21,18 @@ int	main(int argc, char **argv)
 	stacks = &(t_stacks){0};
 	not_valid_args(argc, argv);
 	create_stack_a(argc, argv, &stacks->stack_a);
-	//validation for argc == 1
-	//algo for argc > 1 && < 5
 	if (!stacks->stack_a)
 		exit_func(stacks);
 	stacks->len_stack_a = ps_lstsize(stacks->stack_a);
-//	ft_printf("stack_a size > |%d|\n", stacks->len_stack_a); // debug
-//	ft_printf("Stack a input:\n"); // debug
-//	print_nodes(stacks->stack_a); // debug
 	if (is_ordered(stacks))
 		;
 	else if (argc == 3)
 		move_sa(stacks);
-//	ft_printf("highest bit de 8 é > |%d|\n", find_highest_bit(8)); //debug
 	else if (argc == 4)
-		ps_smallsort(stacks);
+		ps_three_sort(stacks);
+	else if (argc == 6)
+		ps_five_sort(stacks);
 	else
 		ps_radix(stacks);
-//	ft_printf("Stack b:\n"); // debug
-//	print_nodes(stacks->stack_b); // debub
-//	ft_printf("Stack a sorted:\n"); // debug
-//	print_nodes(stacks->stack_a); // debug
 	ps_lstclear(&stacks->stack_a);
-//	ps_lstclear(&stacks->stack_b); //debug
 }

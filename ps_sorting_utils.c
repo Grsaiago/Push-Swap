@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ps_sorting_utils.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gsaiago <gsaiago@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/07 08:34:55 by gsaiago           #+#    #+#             */
+/*   Updated: 2022/10/07 08:35:25 by gsaiago          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 unsigned int	find_next_i(t_stacks *stacks, unsigned int next_i)
 {
-	t_psnode	*stack_a;
+	t_psnode		*stack_a;
 	unsigned int	next_i_distance;
 
 	next_i_distance = 0;
@@ -20,7 +32,7 @@ unsigned int	find_next_i(t_stacks *stacks, unsigned int next_i)
 int	is_ordered(t_stacks *stacks)
 {
 	t_psnode		*stack_a;
-	int		aux;
+	int				aux;
 
 	stack_a = stacks->stack_a;
 	aux = 0;

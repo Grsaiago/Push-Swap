@@ -6,7 +6,7 @@
 /*   By: gsaiago <gsaiago@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:03:24 by gsaiago           #+#    #+#             */
-/*   Updated: 2022/10/03 17:31:26 by gsaiago          ###   ########.fr       */
+/*   Updated: 2022/10/07 13:46:58 by gsaiago          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "./libft/libft.h"
+# include <limits.h>
 
 typedef struct s_psnode
 {

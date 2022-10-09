@@ -29,7 +29,7 @@ SRCS = push_swap.c\
        ps_stacks.c\
        ps_sorting.c\
        ps_sorting_utils.c\
-	   ps_three_sort_utils.c\
+       ps_three_sort_utils.c\
        ps_exit.c\
 
 CC = cc

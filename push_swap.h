@@ -6,7 +6,7 @@
 /*   By: gsaiago <gsaiago@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:03:24 by gsaiago           #+#    #+#             */
-/*   Updated: 2022/10/07 13:46:58 by gsaiago          ###   ########.fr       */
+/*   Updated: 2022/10/09 11:35:05 by gsaiago          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,9 @@ void			index_stack(t_psnode **lst, int ac);
 int				find_highest_bit(int high_numb);
 int				is_ordered(t_stacks *stacks);
 unsigned int	find_next_i(t_stacks *stacks, unsigned int next_i);
+void			first_is_zero(t_stacks *stacks);
+void			first_is_one(t_stacks *stacks);
+void			first_is_two(t_stacks *stacks);
 // VALIDATION FUNCTIONS //
 int				not_valid_args(int ac, char **av);
 int				not_int_range(int ac, char **av);

@@ -6,7 +6,7 @@
 /*   By: gsaiago <gsaiago@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:27:21 by gsaiago           #+#    #+#             */
-/*   Updated: 2022/10/03 14:27:23 by gsaiago          ###   ########.fr       */
+/*   Updated: 2022/10/09 11:38:09 by gsaiago          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,14 @@ void	ps_three_sort(t_stacks *stacks)
 	t_psnode	*stack_a;
 
 	stack_a = stacks->stack_a;
-	move_sa(stacks);
 	if (is_ordered(stacks))
 		return ;
-	move_ra(stacks);
-	if (is_ordered(stacks))
-		return ;
-	stack_a = stacks->stack_a;
-	if (stack_a->next->next->index == 0)
-	{
-		move_sa(stacks);
-		move_rra(stacks);
-	}
-	else if (stack_a->next->next->index == 1)
-		move_ra(stacks);
-	else if (stack_a->next->next->index == 2)
-		move_sa(stacks);
+	if (stack_a->index == 0)
+		first_is_zero(stacks);
+	else if (stack_a->index == 1)
+		first_is_one(stacks);
+	else if (stack_a->index == 2)
+		first_is_two(stacks);
 	return ;
 }
 

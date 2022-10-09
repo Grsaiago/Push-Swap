@@ -6,7 +6,7 @@
 #    By: gsaiago <gsaiago@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/07 08:33:32 by gsaiago           #+#    #+#              #
-#    Updated: 2022/10/07 08:41:51 by gsaiago          ###   ########.fr        #
+#    Updated: 2022/10/09 12:05:40 by gsaiago          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS = push_swap.c\
        ps_stacks.c\
        ps_sorting.c\
        ps_sorting_utils.c\
+	   ps_three_sort_utils.c\
        ps_exit.c\
 
 CC = cc

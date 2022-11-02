@@ -6,7 +6,7 @@
 #    By: gsaiago <gsaiago@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/07 08:33:32 by gsaiago           #+#    #+#              #
-#    Updated: 2022/10/09 12:05:40 by gsaiago          ###   ########.fr        #
+#    Updated: 2022/11/02 13:20:44 by gsaiago          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ LIBFT_LINK = -L$(LIBFT_PATH) -lft
 
 all: $(NAME)
 
-$(NAME): DO_LIBFT
+$(NAME): $(DO_LIBFT)
 	@$(CC) $(CFLAGS) $(SRCS) $(LIBFT_LINK) -o $(NAME)
 	@echo "Push_Swap Done :D"
 

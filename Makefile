@@ -6,7 +6,7 @@
 #    By: gsaiago <gsaiago@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/07 08:33:32 by gsaiago           #+#    #+#              #
-#    Updated: 2022/11/02 13:20:44 by gsaiago          ###   ########.fr        #
+#    Updated: 2022/11/02 13:50:37 by gsaiago          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,19 +34,21 @@ SRCS = push_swap.c\
 
 CC = cc
 
-CFLAGS = -g
+CFLAGS = -g -Wall -Wextra -Werror
 
 LIBFT_PATH = ./libft
 
 LIBFT_LINK = -L$(LIBFT_PATH) -lft
 
+LIBFT = $(LIBFT_PATH)/libft.a
+
 all: $(NAME)
 
-$(NAME): $(DO_LIBFT)
+$(NAME): $(LIBFT)
 	@$(CC) $(CFLAGS) $(SRCS) $(LIBFT_LINK) -o $(NAME)
 	@echo "Push_Swap Done :D"
 
-DO_LIBFT: 
+$(LIBFT): 
 	@make -C $(LIBFT_PATH)
 
 clean:

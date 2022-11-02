@@ -6,7 +6,7 @@
 /*   By: gsaiago <gsaiago@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 08:34:55 by gsaiago           #+#    #+#             */
-/*   Updated: 2022/10/07 08:35:25 by gsaiago          ###   ########.fr       */
+/*   Updated: 2022/11/02 13:53:45 by gsaiago          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ unsigned int	find_next_i(t_stacks *stacks, unsigned int next_i)
 	stack_a = stacks->stack_a;
 	while (stack_a)
 	{
-		if (stack_a->index == next_i)
+		if ((unsigned int )stack_a->index == next_i)
 			return (next_i_distance);
 		next_i_distance++;
 		stack_a = stack_a->next;
